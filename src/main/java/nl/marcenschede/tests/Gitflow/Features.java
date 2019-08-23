@@ -21,9 +21,25 @@ public class Features {
     }
 
     @GetMapping(value = "/feature3", produces = "application/stream+json")
-    public Flux<String> feature3() {
-        return Flux.just("Hello Feature3", "Hello Feature3a", "Hello Feature3b", "Hello Feature3c")
-                .delayElements(Duration.ofSeconds(2));
+    public Flux<Container> feature3() {
+        return Flux
+                .just("Hello Feature3", "Hello Feature3a", "Hello Feature3b", "Hello Feature3c")
+                .map(Container::new)
+                .delayElements(Duration.ofSeconds(1))
+                .map( x -> {
+                    System.out.println(x.text);
+                    return x;
+                });
     }
 
+    public static class Container {
+        public String text;
+
+        public Container() {
+        }
+
+        public Container(String text) {
+            this.text = text;
+        }
+    }
 }
