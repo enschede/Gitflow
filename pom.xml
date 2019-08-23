@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>nl.marcenschede.tests</groupId>
 	<artifactId>Gitflow</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>Gitflow</name>
 	<description>Demo project for Spring Boot</description>
 

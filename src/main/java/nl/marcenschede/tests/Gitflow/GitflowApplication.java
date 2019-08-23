@@ -23,4 +23,9 @@ public class GitflowApplication {
 	public Mono<String> feature2() {
 		return Mono.just("Hello World!");
 	}
+
+	@GetMapping("/feature3")
+	public Mono<String> feature3() {
+		return Mono.just("Hello Feature3");
+	}
 }
