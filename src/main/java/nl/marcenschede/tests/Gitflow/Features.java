@@ -35,9 +35,6 @@ public class Features {
     public static class Container {
         public String text;
 
-        public Container() {
-        }
-
         public Container(String text) {
             this.text = text;
         }
