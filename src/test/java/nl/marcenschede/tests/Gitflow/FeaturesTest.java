@@ -26,6 +26,7 @@ class FeaturesTest {
 
         entries.subscribe(n -> logger.info("Value: {}", n.text));
 
+
         Thread.sleep(6500L);
     }
 }
